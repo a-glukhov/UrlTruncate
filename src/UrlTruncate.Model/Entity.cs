@@ -1,9 +1,11 @@
 ﻿
 namespace UrlTruncate.Model
 {
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
+    /// <summary>
+    /// Base class for models
+    /// </summary>
     public abstract class Entity
     {
         /// <summary>

@@ -5,13 +5,13 @@ namespace UrlTruncate.Service.Services
 {
     using System;
     using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Linq.Expressions;
     using System.Threading.Tasks;
 
     using UrlTruncate.Service.Extensions;
 
+    /// <summary>
+    /// The truncated url service.
+    /// </summary>
     internal class TruncatedUrlService : ITruncatedUrlService
     {
         private readonly IRepository<TruncatedUrl> tuRepository;

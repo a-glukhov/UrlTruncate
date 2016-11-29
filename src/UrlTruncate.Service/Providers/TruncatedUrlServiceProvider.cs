@@ -7,17 +7,37 @@ namespace UrlTruncate.Service.Providers
 
     using UrlTuncate.Data;
 
-    public class TruncatedUrlServiceProvider: ITruncatedUrlServiceProvider
+    /// <summary>
+    /// Service provider
+    /// </summary>
+    public class TruncatedUrlServiceProvider : ITruncatedUrlServiceProvider
     {
-        private IDatabaseFactory<TuDbModel> databaseFactory;
+        /// <summary>
+        /// The database factory.
+        /// </summary>
+        private readonly IDatabaseFactory<TuDbModel> databaseFactory;
 
+        /// <summary>
+        /// The truncated url service.
+        /// </summary>
         private ITruncatedUrlService truncatedUrlService;
+
+        /// <summary>
+        /// The lock obj.
+        /// </summary>
         private readonly object lockObj = new object();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TruncatedUrlServiceProvider"/> class.
+        /// </summary>
         public TruncatedUrlServiceProvider()
         {
             this.databaseFactory = new DatabaseFactory();
         }
 
+        /// <summary>
+        /// Gets the truncated url service.
+        /// </summary>
         public ITruncatedUrlService TruncatedUrlService
         {
             get

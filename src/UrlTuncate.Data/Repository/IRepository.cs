@@ -8,6 +8,11 @@ namespace UrlTruncate.Data.Repository
 
     using UrlTruncate.Model;
 
+    /// <summary>
+    /// The Repository interface.
+    /// </summary>
+    /// <typeparam name="T">
+    /// </typeparam>
     public interface IRepository<T> where T : Entity
     {
         void Add(T entity);

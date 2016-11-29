@@ -10,6 +10,13 @@ namespace UrlTruncate.Data.Repository
 
     using UrlTruncate.Model;
 
+    /// <summary>
+    /// The repository base.
+    /// </summary>
+    /// <typeparam name="T">
+    /// </typeparam>
+    /// <typeparam name="TDbContext">
+    /// </typeparam>
     public abstract class RepositoryBase<T, TDbContext> : IRepository<T>
         where T : Entity where TDbContext : DbContext
     {
