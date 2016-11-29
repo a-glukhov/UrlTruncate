@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "URL Shortener";
+}
+@section scripts{
+    <script src="../../Modules/Truncate.js"></script>
+}
+
+<body>
+    <div class="container">
+
+        <div class="starter-template">
+            <div ng-app="TruncateApp" ng-controller="truncateHandler">
+                <div class="row">
+                    <div class="col-xs-8 col-md-10 input-group-lg">
+                        <input class="form-control" autocomplete="off" type="text" placeholder="Paste a link to truncate" ng-model="originalUrl">
+                    </div>
+                    <div class="col-xs-4 col-md-2 btn-group-lg" role="group">
+                        <button class="btn btn-primary" ng-click="truncateLink()">Truncate</button>
+                    </div>
+                </div>
+                <div id="linkContainer" class="row">
+                    <div class="col-xs-8 col-md-10">
+                        <div class="input-group-lg result-template">
+                            <input type="text" class="form-control" placeholder="The result..." ng-model="truncatedUrl" readonly="readonly">
+                            @*<span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Copy</button>
+                            </span>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+</body>
